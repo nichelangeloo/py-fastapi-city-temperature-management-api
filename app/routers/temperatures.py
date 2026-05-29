@@ -10,9 +10,6 @@ router = APIRouter(
     tags=["Temperatures"]
 )
 
-WEATHER_API_URL = "https://api.open-meteo.com/v1/forecast"
-
-
 async def fetch_mock_weather(city_name: str) -> float | None:
     try:
         async with httpx.AsyncClient() as client:
